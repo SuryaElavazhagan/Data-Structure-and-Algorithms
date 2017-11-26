@@ -5,6 +5,14 @@
 using namespace std;
 
 /*
+    * int is 4 bytes in g++ -pipe -O2 -std=c++11
+    * long is 4 bytes in g++ -pipe -O2 -std=c++11
+    => so it makes long long = 4 + 4  = 8 bytes
+    => 8 * 8 = 64 bits
+    => 2^64 = -9,223,372,036,854,775,807 to 9,223,372,036,854,775,807
+*/
+
+/*
 void stress_testing()
 {
     while(true) {
@@ -77,6 +85,6 @@ int main()
     {
         cin>>a[i];
     }
-    cout<<max_pairwise_product_fast(a);
+     cout<<max_pairwise_product_fast(a);
     return 0;
 }
