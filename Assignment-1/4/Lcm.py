@@ -5,10 +5,8 @@ def gcd(a, b):
         a = a % b
         return gcd(b , a)
 
-#a = int(input("Give a:"))
-#b = int(input("Give b:"))
 a = int(input())
 b = int(input())
-#print("Gcd(", a, " , ", b , ") : ", gcd(a,b))
-print(gcd(a, b))
-
+#a = int(input("Give a:"))
+#b = int(input("Give b:"))
+print (int((a * b)/gcd(a, b)))

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class GCD
+public class LCM
 {
     private static long gcd(long a, long b)
     {
@@ -25,7 +25,6 @@ public class GCD
         b = scanner.nextLong();
         scanner.close();
 
-        System.out.print(gcd(a , b));
-        //System.out.println("GCD(" + a + " , " + b + ") : " + gcd(a, b));
+        System.out.print(((a * b) / gcd(a , b)));
     }
 }

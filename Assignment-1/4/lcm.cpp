@@ -9,7 +9,7 @@ long long gcd(long long a, long long b)
     else
     {
         a = a % b;
-        return gcd(b , a); 
+        return gcd(b , a);
     }
 }
 
@@ -18,12 +18,8 @@ main()
     long long a = 0;
     long long b = 0;
 
-    //cout<<"Give a:";
     cin>>a;
-    //cout<<"Give b:";
     cin>>b;
 
-    //cout<<"GCD("<<a<<" , "<<b<<") :"<<gcd(a, b);
-    cout<<gcd(a, b);
-    return 0;
+    cout<< ((a * b) / gcd(a , b));
 }
