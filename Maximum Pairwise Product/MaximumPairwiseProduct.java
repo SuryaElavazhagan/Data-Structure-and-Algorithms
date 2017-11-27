@@ -94,6 +94,7 @@ public class MaximumPairwiseProduct
             numbers[i] = scanner.nextInt();
         }
         System.out.println(maximumPairwiseFast(numbers));
+        scanner.close();
         //stressTesting();
     }
 }
