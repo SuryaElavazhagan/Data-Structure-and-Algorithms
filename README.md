@@ -1,2 +1,2 @@
-# Data-Structure-and-Algorithms
-My Assignment in coursera
+## Data Structures and Algorithms
+Assignments and solutions to problems.
