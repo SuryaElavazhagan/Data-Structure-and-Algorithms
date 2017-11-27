@@ -8,6 +8,7 @@ int main()
     int n = 0;
     cout<<"Give n:";
     cin>>n;
+    
     int fibbo[n];
     
     //Intialize basic values
@@ -17,15 +18,15 @@ int main()
     /*
         * F[n] = F[n - 1] + F[n - 2]
     */
-    for(int i = 2; i < n; i++)
+    for(int i = 2; i <= n; i++)
     {
-        fibbo[i] = fibbo[i - 1] + fibbo[i -2];
+        fibbo[i] =fibbo[i - 1] + fibbo[i -2];
     }
 
-    for(int i = 0; i < n; i++)
+    for(int i = 0; i <= n; i++)
     {
         cout<<fibbo[i]<<" ";
     }
-
+    cout<<'\n';
     return 0;
 }
