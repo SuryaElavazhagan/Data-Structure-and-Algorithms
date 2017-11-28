@@ -1,9 +1,10 @@
 n = int(input())
-fibbo = list()
-fibbo.append(0)
-fibbo.append(1)
+previous = 1
+current = 0
 
 for i in range(2, n + 1):
-    fibbo.append( ( fibbo[i - 1] + fibbo[i - 2] ) % 10 )
+    temp_previous = previous
+    previous = current
+    current = (previous + temp_previous)%10
 
-print(fibbo[n])
+print current

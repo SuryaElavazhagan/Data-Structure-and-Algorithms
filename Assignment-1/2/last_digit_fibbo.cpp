@@ -7,14 +7,15 @@ main()
     int n = 0;
     cin>>n;
     
-    int fibbo[n + 1];
-    fibbo[0] = 0;
-    fibbo[1] = 1;
+    int previous = 0;
+    int current = 1;
 
     for(int i = 2; i <= n; i++)
     {
-        fibbo[i] = (fibbo[i - 1] + fibbo[i -2])%10;
+        int temp_previous = previous;
+        previous = current;
+        current = (previous + temp_previous)%10;
     }
 
-    cout<<fibbo[n];
+    cout<<current;
 }
