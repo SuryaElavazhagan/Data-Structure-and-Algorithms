@@ -7,4 +7,4 @@ for i in range(2, n + 1):
     previous = current
     current = (previous + temp_previous)%10
 
-print current
+print (current)
