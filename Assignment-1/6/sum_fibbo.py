@@ -1,5 +1,9 @@
 """
     This is Assignment 6
+    /*
+        * Sum of 'n' fibonacci numbers is => F[n + 2] - 1
+        * Explaination in README.md
+    */
 """
 def load(fib):
     """

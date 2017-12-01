@@ -2,6 +2,10 @@
 
 using namespace std;
 
+/*
+    * Product of LCM(a, b) * GCD(a, b) = a * b
+*/
+
 long long gcd(long long a, long long b)
 {
     if(b == 0)

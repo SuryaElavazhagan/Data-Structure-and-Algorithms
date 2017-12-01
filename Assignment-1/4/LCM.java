@@ -2,6 +2,9 @@ import java.util.Scanner;
 
 public class LCM
 {
+    /*
+        * Product of LCM(a, b) * GCD(a, b) = a * b
+    */
     private static long gcd(long a, long b)
     {
         if(b == 0)

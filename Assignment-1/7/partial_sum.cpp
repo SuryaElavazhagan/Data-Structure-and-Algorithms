@@ -3,6 +3,14 @@
 
 using namespace std;
 
+/*
+    * Sum of n Fibonacci numbers is F[n + 2] - 1
+    * Sum of m to n Fibonacci numbers is
+        => (F[n + 2] - 1) - (F[m + 2] - 1)
+                ||                ||        
+            (nth Fibonacci)  (mth Fibonacci)
+        => F[n + 2] - F[m + 2]
+*/
 vector<int> fib;
 
 void load()

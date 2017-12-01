@@ -3,6 +3,12 @@
 
 using namespace std;
 
+/*
+    * Pisano periods => F(n)%m =>> F[n + p] = F[n]
+        => Where p is called 'periods'
+    * Pisano periods are always even except for => F[2] = 3
+    * Each series starts with 0 , 1
+*/
 long long pisano(long long n, long long m)
 {
     vector<int> fibbo;

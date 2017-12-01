@@ -5,6 +5,10 @@ using namespace std;
 
 vector<int> fib;
 
+/*
+    * Sum of 'n' fibonacci numbers is => F[n + 2] - 1
+    * Explaination in README.md
+*/
 void load()
 {
     fib.push_back(0);

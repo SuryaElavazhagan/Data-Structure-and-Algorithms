@@ -2,6 +2,10 @@ import java.util.Scanner;
 
 public class SumFibbo
 {
+    /*
+        * Sum of 'n' fibonacci numbers is => F[n + 2] - 1
+        * Explaination in README.md
+    */
     private static int[] fib = new int[60 + 1];
     private static void load()
     {

@@ -2,6 +2,10 @@
 
 using namespace std;
 
+/*
+    * Here last digit of nth fibonacci number is calculated  
+    * Each time only the last digit of the fibonacci is calculated
+*/
 main()
 {
     int n = 0;
