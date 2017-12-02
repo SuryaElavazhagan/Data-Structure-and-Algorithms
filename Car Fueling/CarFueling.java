@@ -1,4 +1,8 @@
 import java.util.Scanner;
+/*
+    ********************SAFE MOVE**********************
+    Moving as far as the fuel is good enought to reach another gas station
+*/
 
 public class CarFueling
 {
@@ -28,6 +32,8 @@ public class CarFueling
             }
             //System.out.println(a[lastRefills]);
             if(currentRefills == lastRefills)
+            // This happens when gas station is far away that even full tank of fuel 
+            // could not make up
                 return -1;
             if(currentRefills < (n - 1))
                 numRefills++;

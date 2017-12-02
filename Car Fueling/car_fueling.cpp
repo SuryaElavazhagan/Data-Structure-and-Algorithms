@@ -1,6 +1,11 @@
 #include<iostream>
 #include<vector>
 
+/*
+    ********************SAFE MOVE**********************
+    Moving as far as the fuel is good enought to reach another gas station
+*/
+
 using namespace std;
 
     /*
@@ -29,6 +34,8 @@ int minRefills(int n, vector<int> x, int dist_with_full_tank)
         }
         //cout<<a[lastRefills]<<'\n';
         if(currentRefills == lastRefills)
+        // This happens when gas station is far away that even full tank of fuel 
+        // could not make up
             return -1;
         if(currentRefills < (n - 1))
             numRefills++;

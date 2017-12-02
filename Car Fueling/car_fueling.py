@@ -9,6 +9,13 @@
                 => O(n + 1) => O(n)
     */
 """
+
+"""
+/*
+    ********************SAFE MOVE**********************
+    Moving as far as the fuel is good enought to reach another gas station
+*/
+"""
 def min_refills(n, a, dist_with_full_tank):
     num_refills = 0
     current_refills = 0
@@ -22,6 +29,8 @@ def min_refills(n, a, dist_with_full_tank):
                     break
         #print(a[last_refills])
         if current_refills == last_refills:
+            # This happens when gas station is far away that even full tank of 
+            # fuel could not make up
             return "Impossible"
         if current_refills < (n - 1):
             num_refills = num_refills + 1
