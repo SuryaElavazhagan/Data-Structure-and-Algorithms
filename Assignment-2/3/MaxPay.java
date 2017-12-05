@@ -38,5 +38,6 @@ public class MaxPay
             sum += profitPerClick[i] * avgClickInSlot[i];
         
         System.out.println(sum);
+        scanner.close();
     }
 }
