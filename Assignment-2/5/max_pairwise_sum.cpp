@@ -3,6 +3,20 @@
 
 using namespace std;
 
+/*
+    ***************SAFE MOVE****************
+    => Always start with 1 and increment till
+     k < 2l
+      > i.e., For eg., Input : 8
+      > Start with => 1     Remaining : 7    > Condition(7 > (2 * 1)) => TRUE   
+            > Add 1 to result
+      > Increment  => 2     Remaining : 6    > Condition(6 > (2 * 2)) => TRUE
+            > Add 2 to result
+      > Increment  => 3     Remaining : 5    > Condition(5 > (2 * 3)) => FALSE
+            > Add 5 to result
+    => Stop
+*/
+
 void get_max_pairwise_sum(long n)
 {
     vector<long> pairs;
