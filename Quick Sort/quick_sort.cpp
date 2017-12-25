@@ -47,7 +47,7 @@ void quick_sort(vector<int> &list, int low, int high)
         return;
     
     int pivot_index = partition(list, low, high);
-    
+
     // Divide array by 2 with respect to pivot element
 
     // Left partition

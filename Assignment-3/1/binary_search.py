@@ -3,7 +3,7 @@ def bin_search(array, low, high, search_key):
         Actual logic goes here
     """
     if high < low:
-        return low
+        return -1
     """
         (low + high) / 2 => may be float
         > It is type casted to integer

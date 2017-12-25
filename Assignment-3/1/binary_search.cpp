@@ -15,7 +15,7 @@ int bin_search(vector<long long> array, int low, int high, long long key)
         (low + high) / 2 => may be float
         > It is type casted to integer
     */
-    int mid = (int)((low + high) / 2);
+    int mid = (int)(low + ((high - low) / 2));
     
     /*
         * If the element is present, finally the element will be in the mid
