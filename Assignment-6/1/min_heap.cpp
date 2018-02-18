@@ -26,12 +26,6 @@ void swap(long long &a, long long &b)
   b = temp;
 }
 
-// This will return the index of parent of node i.
-long long parent(long long i)
-{
-  return (i/2);
-}
-
 // This will return the index of left child of node i.
 long long left_child(long long i)
 {
