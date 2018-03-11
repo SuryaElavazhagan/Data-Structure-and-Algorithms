@@ -1,4 +1,4 @@
-#Data Structures and Algorithm
+# DATA STRUCTURES AND ALGORITHM
 
 Notes:   
     * [Theorem 1 - Sum of Fibonacci series](http://mathforum.org/library/drmath/view/52707.html)
