@@ -8,7 +8,7 @@ using namespace std;
 #define MIN numeric_limits<int>::max()
 #define MAX numeric_limits<int>::min()
 
-int min(int a, int b, int c, int d, int e)
+int mini(int a, int b, int c, int d, int e)
 {
     if(a <= b && a <= c && a <= d && a <= e)
         return a;
@@ -20,7 +20,7 @@ int min(int a, int b, int c, int d, int e)
         return d;
 }
 
-int max(int a, int b, int c, int d, int e)
+int maxi(int a, int b, int c, int d, int e)
 {
     if(a >= b && a >= c && a >= d && a >= e)
         return a;
@@ -33,12 +33,24 @@ int max(int a, int b, int c, int d, int e)
 }
 
 
+int perform_operation(int a, int b, char op)
+{
+    switch(op)
+    {
+        case '+' : return a + b;
+        case '-' : return a - b;
+        case '*' : return a * b;
+    }
+}
+
 int main()
 {
     string arithmetic_expression;
     cin>>arithmetic_expression;
     int size = arithmetic_expression.size();
     int temp = 0;
+    int min_val = MIN;
+    int max_val = MAX;
 
     vector<int> numbers;
     vector<char> operators;
@@ -50,24 +62,56 @@ int main()
             operators.push_back(arithmetic_expression[i]);
     }
 
+    size = numbers.size();
+
     vector< vector<int> > min(size, vector<int>(size));
     vector< vector<int> > max(size, vector<int>(size));
 
-    for(int i = 0; i < size; i++, temp++)
+    for(int i = 0; i < size; i++)
     {
-        max[i][i] = min[i][i] = arithmetic_expression[temp++];
+        max[i][i] = min[i][i] = numbers[i];
     }
     temp = 0;
     for(int i = 1; i < size; i++)
     {
-        for(int j = 1; j < (size - i); j++)
+        for(int j = 0; j < (size - i); j++)
         {
             temp = j + i;
+            min_val = MIN;
+            max_val = MAX;
             for(int k = j; k < temp; k++)
             {
-                int a = perform_operation(max[j][k], max[j][temp], arithmetic_expression[k]);
+                int a = perform_operation(max[j][k], max[k + 1][temp], operators[k]);
+                int b = perform_operation(max[j][k], min[k + 1][temp], operators[k]);
+                int c = perform_operation(min[j][k], min[k + 1][temp], operators[k]);
+                int d = perform_operation(min[j][k], max[k + 1][temp], operators[k]);
+
+                min_val = mini(min_val, a, b, c, d);
+                max_val = maxi(max_val, a, b, c, d);
+
+                //cout<<"Pos "<<"["<<j<<"]["<<temp<<"] : "<<"Min : "<<min_val<<" Max_val : "<<max_val<<endl;
             }
+
+            min[j][temp] = min_val;
+            max[j][temp] = max_val;
         }
-    }  
+    }
+
+    /*cout<<"Minimum : "<<endl;
+    for(int i = 0; i < size; i++)
+    {
+        for(int j = 0; j < size; j++)
+            cout<<min[i][j]<<" ";
+        cout<<endl;
+    }
+    cout<<"Maximum : "<<endl;
+    for(int i = 0; i < size; i++)
+    {
+        for(int j = 0; j < size; j++)
+            cout<<max[i][j]<<" ";
+        cout<<endl;
+    }*/
+
+    cout<<max[0][size - 1]<<endl;  
     return 0;
 }
