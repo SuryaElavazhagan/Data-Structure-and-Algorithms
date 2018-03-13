@@ -35,14 +35,14 @@ long long knapsack(long long total_weight, long long total_items, vector<long lo
         }
     }
 
-    for(long long i = 0; i <= total_weight; i++)
+    /*for(long long i = 0; i <= total_weight; i++)
     {
         for(long long j = 0; j <= total_items; j++)
         {
             cout<<max_values[i][j]<<" ";
         }
         cout<<endl;
-    }
+    }*/
 
     return max_values[total_weight][total_items];
 }
